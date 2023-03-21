@@ -20,3 +20,14 @@ git init
 ```csharp
 git remote add origin https://github.com/your-username/your-repo-name.git
 ```
+将“your-username”替换为您的GitHub用户名，将“your-repo-name”替换为您在步骤6中创建的仓库名称。
+
+将本地更改推送到远程存储库。在VSCode的终端中，运行以下命令：
+```shell 
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+```
+这将将您的本地更改推送到远程存储库，并将其与主分支（master）关联起来。
+
+现在，您已经成功在VSCode中关联GitHub并创建了一个公开或私有的存储库。
