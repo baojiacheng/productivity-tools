@@ -1,7 +1,7 @@
 # productivity-tools
 Productivity tools can help software developers write, test, and deploy code faster and more efficiently, improving the quality and efficiency of software development.
 
-# 如何在vscode中关联github,并创建公开或私有库
+## 如何在vscode中关联github,并创建公开或私有库
 
 要在VSCode中关联GitHub并创建公开或私有库，您可以按照以下步骤操作：
 
