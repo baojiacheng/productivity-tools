@@ -11,23 +11,62 @@
 - 在VSCode中创建一个新的文件夹，并打开它。
 
 - 初始化Git存储库。在VSCode的终端中，运行以下命令：
-```csharp
+
+```shell
 git init
 ```
 - 创建一个新的GitHub仓库。在GitHub的官方网站上，单击“New repository”按钮，填写仓库名称和描述，然后选择是公开还是私有仓库。
 
 - 将本地存储库与远程GitHub存储库关联。在VSCode的终端中，运行以下命令：
-```csharp
+
+```shell
 git remote add origin https://github.com/your-username/your-repo-name.git
 ```
-将“your-username”替换为您的GitHub用户名，将“your-repo-name”替换为您在步骤6中创建的仓库名称。
+
+将“your-username”替换为您的GitHub用户名，将“your-repo-name”替换为您在步骤中创建的仓库名称。
 
 将本地更改推送到远程存储库。在VSCode的终端中，运行以下命令：
+
 ```shell 
 git add .
 git commit -m "Initial commit"
 git push -u origin master
 ```
+
 这将将您的本地更改推送到远程存储库，并将其与主分支（master）关联起来。
 
 现在，您已经成功在VSCode中关联GitHub并创建了一个公开或私有的存储库。
+
+---
+
+要将"master"分支合并到"main"分支，您可以按照以下步骤操作：
+
+当您在两个不相关的 Git 存储库之间尝试合并历史记录时，Git 会拒绝您的请求，并显示 "fatal: refusing to merge unrelated histories" 错误消息。为了解决这个问题，您可以使用 --allow-unrelated-histories 选项来允许 Git 合并不同的历史记录。以下是解决方法：
+
+- 确保您已经切换到 "main" 分支。在终端或命令行中，输入以下命令：
+
+```shell
+git checkout main
+```
+
+- 将 "master" 分支合并到 "main" 分支。在终端或命令行中，输入以下命令，并使用 --allow-unrelated-histories 选项来允许 Git 合并不同的历史记录：
+
+```shell
+git merge master --allow-unrelated-histories
+```
+
+- 如果存在冲突，您需要解决这些冲突。使用您选择的文本编辑器打开带有冲突的文件，解决冲突并保存更改。
+
+- 提交合并结果。在终端或命令行中，输入以下命令：
+
+```shell
+git commit -m "Merge master into main"
+```
+
+- 将合并结果推送到远程仓库。在终端或命令行中，输入以下命令：
+
+```shell
+git push
+```
+
+现在，您已经成功将 "master" 分支合并到 "main" 分支，并将更改推送到远程仓库。
